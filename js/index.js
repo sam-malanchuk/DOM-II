@@ -45,5 +45,17 @@ window.addEventListener('scroll', function() {
 const formTextarea = document.getElementById('formTextarea');
 formTextarea.addEventListener('select', function(event) {
     alert(`You selected the following text: "${event.target.value.substring(event.target.selectionStart, event.target.selectionEnd)}"`);
-  });
+});
 
+// On focus of the main input field, add a border
+const formName = document.getElementById('formName');
+formName.addEventListener('focus', function(event) {
+    event.target.style.borderColor = 'red';    
+    event.target.style.borderSize = '3px';    
+});
+
+// On blur of the main input field, remove styling border to default
+formName.addEventListener('blur', (event) => {
+    event.target.style.borderColor = '';    
+    event.target.style.borderSize = '';    
+});
