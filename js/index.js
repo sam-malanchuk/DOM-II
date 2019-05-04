@@ -59,3 +59,22 @@ formName.addEventListener('blur', (event) => {
     event.target.style.borderColor = '';    
     event.target.style.borderSize = '';    
 });
+
+// Demonstrating event propagation 
+const outsideLayer = document.getElementById('outsideLayer');
+const insideLayer = document.getElementById('insideLayer');
+const pLayer = document.getElementById('pLayer');
+const displayResult = document.getElementById('formTextarea');
+
+outsideLayer.addEventListener('click', function(e) {
+    displayResult.value = 'You just clicked the outside layer\n' + displayResult.value;
+});
+insideLayer.addEventListener('click', function(e) {
+    displayResult.value = 'You just clicked the inside layer\n' + displayResult.value;
+    e.stopPropagation();
+});
+pLayer.addEventListener('click', function(e) {
+    displayResult.value = 'You just clicked the paragraph layer\n' + displayResult.value;
+    e.stopPropagation();
+});
+
