@@ -23,3 +23,10 @@ documentHome.addEventListener('dblclick', function(e) {
     documentHome.style.backgroundColor = "#c2b280";
 });
 
+// Rotate the main header image when the 'R' key is pressed
+document.addEventListener('keydown', function(event) {
+    if(event.key === 'r') {
+        headerImg.style.transform = 'rotate(5deg)';
+    }
+});
+
