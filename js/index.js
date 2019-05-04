@@ -41,3 +41,9 @@ window.addEventListener('scroll', function() {
     alert('you just scrolled');
 });
 
+// on select of any text in the document
+const formTextarea = document.getElementById('formTextarea');
+formTextarea.addEventListener('select', function(event) {
+    alert(`You selected the following text: "${event.target.value.substring(event.target.selectionStart, event.target.selectionEnd)}"`);
+  });
+
