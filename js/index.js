@@ -36,3 +36,8 @@ window.addEventListener("resize", function() {
     homeLink.style.display = 'none';
 });
 
+// on scroll alert
+window.addEventListener('scroll', function() {
+    alert('you just scrolled');
+});
+
