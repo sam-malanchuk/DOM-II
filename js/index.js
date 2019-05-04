@@ -30,3 +30,9 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+// On window resize it will hide the 'Home' navigation link
+const homeLink = document.querySelector('.nav').childNodes[1];
+window.addEventListener("resize", function() {
+    homeLink.style.display = 'none';
+});
+
