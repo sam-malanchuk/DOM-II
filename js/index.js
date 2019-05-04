@@ -78,3 +78,11 @@ pLayer.addEventListener('click', function(e) {
     e.stopPropagation();
 });
 
+// preventDefault() demonstration
+const navLinks = document.getElementsByClassName('nav-link');
+const navArray = Array.from(navLinks);
+navArray.forEach(function(link) {
+    link.addEventListener('click', function(linkClicked) {
+        linkClicked.preventDefault();
+    });
+});
